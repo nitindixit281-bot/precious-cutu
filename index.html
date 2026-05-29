@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Shreya ❤️</title>
+
+<style>
+.purple-bg{
+  background: linear-gradient(135deg,#2b0a3d,#5b1e8c,#9b59ff);
+}
+
+.purple-theme{
+  background: linear-gradient(135deg,
+  #432371,
+  #714674,
+  #c06c84,
+  #f8b195);
+}
+
+.purple-soft{
+  background: linear-gradient(135deg,#3d1457,#7b2cbf,#c77dff);
+}
+
+.purple-cinematic{
+  background: radial-gradient(circle,
+  rgba(180,120,255,0.35),
+  #120018,
+  #000);
+}
+
+body{
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  text-align:center;
+  overflow:hidden;
+  background:#ff69b4;
+}
+
+.page{
+  display:none;
+  height:100vh;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  opacity:0;
+  transform:scale(0.95);
+  transition:0.5s;
+}
+.active{
+  display:flex;
+  opacity:1;
+  transform:scale(1);
+}
+
+.card{
+  background: rgba(255,255,255,0.3);
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+h1,p{color:#fff}
+
+.glow{
+  font-size:36px;
+  animation:glow 1.5s infinite alternate;
+}
+@keyframes glow{
+  from{text-shadow:0 0 10px #fff;}
+  to{text-shadow:0 0 25px #ff4d88;}
+}
+
+button{
+  padding:12px 22px;
+  border:none;
+  border-radius:25px;
+  background:#ff4d88;
+  color:white;
+  font-size:18px;
+  margin:10px;
+  cursor:pointer;
+}
+
+button.glowShake{
+  animation:shake 0.5s;
+  box-shadow:0 0 15px #ff69b4;
+}
+@keyframes shake{
+  0%{transform:translateX(0);}
+  20%{transform:translateX(-10px);}
+  40%{transform:translateX(10px);}
+  60%{transform:translateX(-10px);}
+  80%{transform:translateX(10px);}
+  100%{transform:translateX(0);}
+}
+
+button.sparkle{
+  animation:sparkle 0.8s forwards;
+}
+
+.flower-click{
+  animation:flowerGlow 0.6s;
+}
+
+@keyframes flowerGlow{
+
+  0%{
+    transform:scale(1);
+    filter:drop-shadow(0 0 0px white);
+  }
+
+  50%{
+    transform:scale(1.15);
+    filter:
+    drop-shadow(0 0 15px #fff)
+    drop-shadow(0 0 30px #ff69b4);
+  }
+
+  100%{
+    transform:scale(1);
+    filter:drop-shadow(0 0 0px white);
+  }
+
+}
+
+@keyframes sparkle{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+img{
+  width:40vw;
+  max-width:180px;
+  border-radius:15px;
+  margin:10px;
+}
+
+.big-img{
+  width:70vw;
+  max-width:350px;
+}
+
+.flower-full{
+
+  width:100vw;
+  height:100vh;
+
+  object-fit:cover;
+
+  position:absolute;
+  top:0;
+  left:0;
+
+}
+
+.flower-overlay{
+
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.25);
+
+}
+
+.flower-text{
+
+  position:relative;
+  z-index:5;
+
+  color:white;
+
+  text-align:center;
+
+  padding:20px;
+
+  max-width:700px;
+
+  animation:fadeUp 1s ease;
+
+}
+
+.flower-title{
+
+  font-size:60px;
+  margin-bottom:25px;
+
+  text-shadow:
+  0 0 15px rgba(255,255,255,0.7);
+
+}
+
+.flower-para{
+
+  font-size:28px;
+  line-height:1.7;
+
+  text-shadow:
+  0 0 10px rgba(0,0,0,0.5);
+
+}
+
+.flower-btn{
+
+  margin-top:35px;
+
+  padding:14px 34px;
+
+  border:none;
+  border-radius:40px;
+
+  background:rgba(255,255,255,0.2);
+
+  backdrop-filter:blur(10px);
+
+  color:white;
+
+  font-size:22px;
+
+  cursor:pointer;
+
+  box-shadow:
+  0 0 20px rgba(255,255,255,0.3);
+
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.zoom{transform:scale(1.15);}
+
+.burst{position:absolute;animation:pop 1s forwards;}
+@keyframes pop{100%{transform:scale(2);opacity:0}}
+
+.lalala{position:absolute;color:#ff4d88;font-size:22px;animation:lalalaFloat 1.5s forwards;}
+@keyframes lalalaFloat{100%{opacity:0;transform:translateY(-80px)}}
+
+.line{
+  color:white;
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.6s;
+  font-size:26px;
+}
+.line.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.big-text{font-size:26px;line-height:2;}
+
+.final-text{font-size:34px;}
+
+/* 💖 CINEMATIC LAST PAGE */
+.cinematic-bg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:radial-gradient(circle at center, rgba(255,105,180,0.4), #000);
+  opacity:0;
+  animation:fadeInBg 2s forwards;
+  z-index:-1;
+}
+@keyframes fadeInBg{
+  to{opacity:1;}
+}
+
+.cinematic-text{
+  opacity:0;
+  transform:scale(0.8);
+  animation:cinemaText 2.5s forwards;
+  animation-delay:0.5s;
+}
+@keyframes cinemaText{
+  to{
+    opacity:1;
+    transform:scale(1.05);
+    text-shadow:0 0 20px #ff69b4, 0 0 40px #ff4d88;
+  }
+}
+
+.reveal-bg{
+  background: url('pic18.jpg') center/cover no-repeat;
+}
+.mermaid{
+  position:absolute;
+  font-size:24px;
+  animation:mermaidFloat 1.5s forwards;
+}
+
+@keyframes mermaidFloat{
+  0%{transform:scale(1);}
+  100%{
+    transform:translateY(-80px) scale(1.5);
+    opacity:0;
+  }
+}
+
+.intro-line{
+  position:absolute;
+  color:white;
+  font-size:24px;
+  opacity:0;
+  animation:fadeIntro 0.8s forwards;
+  max-width:80%;
+}
+
+@keyframes fadeIntro{
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+.menu-click{
+  animation: menuPop 0.5s;
+}
+
+@keyframes menuPop{
+
+  0%{
+    transform:scale(1);
+  }
+
+  30%{
+    transform:scale(1.25) rotate(-3deg);
+  }
+
+  60%{
+    transform:scale(1.15) rotate(3deg);
+  }
+
+  100%{
+    transform:scale(1);
+    text-shadow:0 0 20px #fff,
+                0 0 40px #c77dff;
+  }
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<audio id="song2" src="song2.mp3"></audio>
+
+<div id="showThing" class="page">
+  <div class="card">
+    <h1>Pakka dikhla du? 😏💖</h1>
+    <button onclick="showPage('finalReveal')">Ok 💖</button>
+    <button onclick="showPage('page3')">Back ⬅️</button>
+  </div>
+</div>
+
+<div id="finalReveal" class="page reveal-bg">
+  <div class="card">
+    
+    <img src="pic17.jpg" onclick="showMermaids(event)" style="width:320px; max-width:80vw; border-radius:20px; margin-bottom:15px;">
+    <h1>Hehe surprise 💖</h1>
+    
+    <button onclick="showPage('page3')">Back ⬅️</button>
+  </div>
+</div>
+
+<!-- NEW PAGE 1 -->
+<div id="page1" class="page active">
+
+  <div class="cinematic-bg"></div>
+
+  <div class="card">
+
+    <h1 id="introText" class="cinematic-text">
+      goddess💖
+    </h1>
+
+    <button id="introBtn"
+            onclick="startIntroStory()">
+      Start 🎬
+    </button>
+
+<br><br>
+
+<p class="line show"
+   style="
+   opacity:1;
+   transform:none;
+   cursor:pointer;
+   "
+   onclick="menuOpen(this,'flowerChoice')">
+
+   ✨ A little surprise
+
+</p>
+
+</div>
+
+  </div>
+
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+
+  <div class="card">
+
+    <h1>LALALALA</h1>
+
+    <p class="line show"
+style="opacity:1;transform:none;cursor:pointer;"
+onclick="menuOpen(this,'drawingsMenu')">
+✨ Drawings
+</p>
+
+<p class="line show"
+style="opacity:1;transform:none;cursor:pointer;"
+onclick="menuOpen(this,'compliments')">
+✨ Compliments
+</p>
+
+<p class="line show"
+style="opacity:1;transform:none;cursor:pointer;"
+onclick="menuOpen(this,'page4')">
+✨ Fav Moments
+</p>
+
+<p class="line show"
+style="opacity:1;transform:none;cursor:pointer;"
+onclick="menuOpen(this,'poemPage')">
+✨ Poems
+</p>
+
+<p class="line show"
+style="opacity:1;transform:none;cursor:pointer;"
+onclick="menuOpen(this,'videoPage')">
+✨ Edits
+</p>
+
+<p class="line show"
+style="opacity:1;transform:none;cursor:pointer;"
+onclick="menuOpen(this,'randomPage')">
+✨ Random Things
+</p>
+
+<p class="line show"
+style="opacity:1;transform:none;cursor:pointer;"
+onclick="menuOpen(this,'digitalArtPage')">
+✨ Digital Art
+</p>
+
+   <button onclick="showPage('page1')">Back ⬅️</button>
+   <button onclick="showPage('meaningPage')">Next ➡️</button>
+
+  </div>
+
+</div>
+<!-- DRAWINGS MENU -->
+<div id="drawingsMenu" class="page">
+
+  <div class="card">
+
+    <h1>Choose one 💕</h1>
+
+    <img src="pic3.jpg" onclick="zoomAndOpen(this,'page5')">
+    <img src="pic5.jpg" onclick="zoomAndOpen(this,'page6')">
+    <img src="pic7.jpg" onclick="zoomAndOpen(this,'page7')">
+    <img src="pic9.jpg" onclick="zoomAndOpen(this,'page8')">
+    <img src="pic13.jpg" onclick="zoomAndOpen(this,'page9')">
+    <img src="pic15.jpg" onclick="zoomAndOpen(this,'page10')">
+    <img src="pic23.jpg" onclick="zoomAndOpen(this,'page11')">
+    <img src="pic25.jpg" onclick="zoomAndOpen(this,'page12')">
+    <img src="pic22.jpg" onclick="zoomAndOpen(this,'page13')">
+    <img src="pic29.jpg" onclick="zoomAndOpen(this,'page14')">
+
+
+    <br>
+
+    <button onclick="showPage('showThing')">
+      Ek cheez dikhlao 👀
+    </button>
+
+    <button onclick="showPage('page3')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+<!-- IMAGE PAGES -->
+<div id="page5" class="page"><div class="card"><img src="pic4.jpg" class="big-img"><p>my first drawing 💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page6" class="page"><div class="card"><img src="pic6.jpg" class="big-img"><p>your fav pic 💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page7" class="page"><div class="card"><img src="pic8.jpg" class="big-img"><p>you look so good 😭💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page8" class="page"><div class="card"><img src="pic10.jpg" class="big-img"><p>my fav drawing 💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page9" class="page"><div class="card"><img src="pic14.jpg" class="big-img"><p>awwww my cutu 💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page10" class="page"><div class="card"><img src="pic16.jpg" class="big-img"><p>you look so good in saree 💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page11" class="page"><div class="card"><img src="pic24.jpg" class="big-img"><p>hehe cutu💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page12" class="page"><div class="card"><img src="pic26.jpg" class="big-img"><p>you the best💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page13" class="page"><div class="card"><img src="pic31.jpg" class="big-img"><p>baddie💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page14" class="page"><div class="card"><img src="pic30.jpg" class="big-img"><p>beautiful💖</p><button onclick="showPage('page3')">Back</button></div></div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+  <div class="card">
+    <h1>My Favorite Moments 💕</h1>
+    <div id="lines">
+      <div class="line">When you laugh 💖</div>
+      <div class="line">When you smile 😊</div>
+      <div class="line">When we talk 🥺</div>
+      <div class="line">When we vc like now ❤️</div>
+      <div class="line">When you say “aap bhi na” 🥺</div>
+      <div class="line">When you say “apka shukriyawaad” 💖</div>
+      <div class="line">When you say “lalala” 😭💖</div>
+      <div class="line">When you hum songs 🎶</div>
+      <div class="line">You're my fav hehe ❤️</div>
+    </div>
+    <button onclick="showPage('page3')">Back ⬅️</button>
+  </div>
+</div>
+
+<!-- FINAL -->
+<div id="final" class="page">
+  <div class="card">
+    <h1>Are you happy Shreya? 💖</h1>
+    <button onclick="yesClicked()">Yes 💖</button>
+    <button onclick="noClicked(event)">No 😈</button>
+  </div>
+</div>
+
+<!-- THANKS -->
+<div id="thanks" class="page">
+  <div class="card">
+    <h1 class="glow">Apka Shukriyawaad 💖</h1>
+    <button onclick="showPage('compliments')">Next ➡️</button>
+  </div>
+</div>
+
+<!-- COMPLIMENTS -->
+<div id="compliments" class="page">
+  <div class="card">
+    <p class="big-text">
+      <span onclick="event.stopPropagation(); showPage('perfectPage')" style="cursor:pointer;text-decoration:underline;">
+        You're perfect 💖
+      </span><br><br>
+      <span onclick="event.stopPropagation(); showPage('eyesPage')" style="cursor:pointer;text-decoration:underline;">
+        Your pretty eyes 👀
+      </span><br><br>
+      <span onclick="event.stopPropagation(); showPage('voicePage')" style="cursor:pointer;text-decoration:underline;">
+        Your cute voice 🎶
+      </span><br><br>
+      <span onclick="event.stopPropagation(); showPage('facePage')" style="cursor:pointer;text-decoration:underline;">
+       Your gorgeous face 😍
+      </span><br><br>
+      <span onclick="event.stopPropagation(); showPage('hairPage')" style="cursor:pointer;text-decoration:underline;">
+       Your beautiful hairs 💕
+      </span><br><br>
+      <span onclick="event.stopPropagation(); showPage('smilePage')" style="cursor:pointer;text-decoration:underline;">
+       your pretty smile 😍
+      </span>
+    </p>
+<button onclick="showPage('page3')">Back ⬅️</button>
+  </div>
+</div>
+
+<!-- EYES -->
+<div id="eyesPage" class="page">
+  <div class="card">
+    <img src="pic11.jpg" class="big-img">
+    <p>damnn I was right 💖</p>
+    <button onclick="showPage('compliments')">Back ⬅️</button>
+  </div>
+</div>
+
+<!-- PIC12 -->
+<div id="pic12Page" class="page">
+  <div class="card">
+    <img src="pic12.jpg" class="big-img">
+    <p>this is for you 💖</p>
+    <button onclick="showPage('last')">Next ➡️</button>
+  </div>
+</div>
+
+<div id="facePage" class="page">
+  <div class="card">
+    <img src="pic19.jpg" class="big-img">
+    <p>awww your pretty face 😍💖</p>
+    <button onclick="showPage('compliments')">Back ⬅️</button>
+  </div>
+</div>
+
+<div id="hairPage" class="page">
+  <div class="card">
+    <img src="pic20.jpg" class="big-img">
+    <p>your hairs are sooo pretty 😭💖</p>
+    <button onclick="showPage('compliments')">Back ⬅️</button>
+  </div>
+</div>
+
+<div id="smilePage" class="page">
+  <div class="card">
+    <img src="pic21.jpg" class="big-img">
+    <p>that smile 😭💖 my fav thing</p>
+    <button onclick="showPage('compliments')">Back ⬅️</button>
+  </div>
+</div>
+
+<div id="perfectPage" class="page">
+  <div class="card">
+    <img src="pic22.jpg" class="big-img">
+    <p>you're literally perfect for me 😭💖</p>
+    <button onclick="showPage('compliments')">Back ⬅️</button>
+  </div>
+</div>
+
+<div id="voicePage" class="page">
+  <div class="card">
+    <p style="font-size:24px;">
+      i dont have your voice msg 😭<br><br>
+      but its super cute hehe 💖🎶
+    </p>
+    <button onclick="showPage('compliments')">Back ⬅️</button>
+  </div>
+</div>
+
+<div id="poemPage" class="page">
+  <div class="card">
+
+    <h1>This is for you 💖</h1>
+
+    <div style="margin-top:20px;">
+
+      <div class="line poem-line">The day we met... 💖</div>
+      <div class="line poem-line">I think of you 🥺</div>
+      <div class="line poem-line">The day we talked... 💕</div>
+      <div class="line poem-line">I fell for you ❤️</div>
+      <div class="line poem-line">The day we laugh... 😊</div>
+      <div class="line poem-line">I admire you 💖</div>
+      <div class="line poem-line">And currently I am... 🥺</div>
+      <div class="line poem-line">Thinking of you 💭❤️</div>
+      <div class="line poem-line">Your eyes, your face... 👀</div>
+      <div class="line poem-line">Your smile, your voice... 🎶</div>
+      <div class="line poem-line">Your beautiful hairs... 💕</div>
+      <div class="line poem-line">In my thoughts... 💭</div>
+      <div class="line poem-line">In my smile... 😊</div>
+      <div class="line poem-line">In my heart... forever 💖</div>
+
+    </div>
+
+    <br>
+
+  <button onclick="showPage('page3')">
+  Back ⬅️
+</button>
+
+  </div>
+</div>
+
+<!-- 💖 CINEMATIC LAST PAGE -->
+<div id="last" class="page">
+  <div class="cinematic-bg"></div>
+  <div class="card">
+    <h1 class="final-text">i hope now you are happy sweetuu 💖</h1>
+    <button onclick="lastYesClicked()">Yes 💖</button>
+    <button id="lastNoBtn" onclick="lastNoClicked(event)">No 😈</button>
+    <p id="lastNoText"></p>
+  </div>
+</div>
+
+<!-- NEXT -->
+<div id="meaningPage" class="page">
+  <div class="card">
+    <h1>you know what you mean to me... 💖</h1>
+    <button onclick="showPage('earthPage')">Next ➡️</button>
+  </div>
+</div>
+
+<div id="earthPage" class="page">
+  <div class="card">
+    <img src="earth.gif" class="big-img">
+    <p>my whole world 🌍💖</p>
+    <button onclick="showPage('funPage')">Next ➡️</button>
+  </div>
+</div>
+
+<div id="finalFinal" class="page">
+
+  <div class="cinematic-bg"></div>
+
+  <div class="card">
+
+    <h1 class="final-text cinematic-text">
+     Be happy my lalala💖✨
+    </h1>
+
+  </div>
+
+</div>
+
+<!-- VIDEO -->
+<div id="videoPage" class="page">
+
+  <div class="card">
+
+    <h1>Choose an edit 💖</h1>
+
+    <p class="line show"
+       style="opacity:1;transform:none;cursor:pointer;"
+       onclick="openEdit('edit1Page')">
+       ✨ Edit 1
+    </p>
+
+    <p class="line show"
+       style="opacity:1;transform:none;cursor:pointer;"
+       onclick="openEdit('edit2Page')">
+       ✨ Edit 2
+    </p>
+
+    <br>
+
+    <button onclick="showPage('page3')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+
+<div id="edit1Page" class="page">
+
+  <div class="card">
+
+    <video id="edit1Video" width="300" controls playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <br>
+
+    <button onclick="backFromEdits()">Back ⬅️</button>
+
+  </div>
+
+</div>
+
+
+<div id="edit2Page" class="page">
+
+  <div class="card">
+
+    <video id="edit2Video" width="300" controls playsinline>
+      <source src="video2.mp4" type="video/mp4">
+    </video>
+
+    <br>
+
+    <button onclick="backFromEdits()">Back ⬅️</button>
+
+  </div>
+
+</div>
+
+<div id="randomPage" class="page">
+
+  <div class="card">
+
+    <img src="pic12.jpg" class="big-img">
+
+    <img src="pic27.jpg" class="big-img">
+
+    <img src="pic28.jpg" class="big-img">
+
+    <img src="pic32.jpg" class="big-img">
+    
+    <p>this is for you 💖</p>
+
+    <button onclick="showPage('page3')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+
+<div id="digitalArtPage" class="page">
+
+  <div class="card">
+
+    <h1>Digital Art 🎨</h1>
+
+    <img src="art1.jpg"
+         onclick="zoomAndOpen(this,'art1Page')">
+
+    <img src="art2.jpg"
+         onclick="zoomAndOpen(this,'art2Page')">
+
+    <br>
+
+    <button onclick="showPage('page3')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+
+<div id="art1Page" class="page">
+  <div class="card">
+
+    <img src="art1.jpg" class="big-img">
+
+    <p>💖</p>
+
+    <button onclick="showPage('digitalArtPage')">
+      Back ⬅️
+    </button>
+
+  </div>
+</div>
+
+<div id="art2Page" class="page">
+  <div class="card">
+
+    <img src="art2.jpg" class="big-img">
+
+    <p>💖</p>
+
+    <button onclick="showPage('digitalArtPage')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+
+<div id="funPage" class="page">
+
+  <div class="card">
+
+    <h1>Are you happy Shreya? 💖</h1>
+
+    <button onclick="showPage('finalFinal')">
+      Yes 💖
+    </button>
+
+    <button id="funNoBtn"
+            onclick="funNoClicked()">
+      No 😈
+    </button>
+
+    <p id="funNoText"></p>
+
+  </div>
+
+</div>
+
+<div id="flowerChoice" class="page">
+
+  <div class="card">
+
+    <h1>Choose one 💖</h1>
+
+<div style="
+display:flex;
+gap:40px;
+justify-content:center;
+align-items:center;
+margin-top:25px;
+">
+
+  <!-- ROSE -->
+  <div onclick="openFlower(this,'rosePage')"
+       style="cursor:pointer;">
+
+    <img src="roseSticker.jpg"
+         style="
+         width:120px;
+         ">
+
+    <p style="
+    color:white;
+    font-size:22px;
+    margin-top:8px;
+    ">
+      Rose 🌹
+    </p>
+
+  </div>
+
+  <!-- LAVENDER -->
+  <div onclick="openFlower(this,'lavenderPage')"
+       style="cursor:pointer;">
+
+    <img src="lavenderSticker.jpg"
+         style="
+         width:120px;
+         ">
+
+    <p style="
+    color:white;
+    font-size:22px;
+    margin-top:8px;
+    ">
+      Lavender 💜
+    </p>
+
+  </div>
+
+</div>
+
+</div>
+
+    <br>
+
+    <button onclick="showPage('page1')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+
+</div>
+
+<!-- ROSE PAGE -->
+<div id="rosePage" class="page"
+style="background:url('rose.jpg') center/cover no-repeat;">
+
+  <div style="
+  width:85%;
+  max-width:520px;
+  height:82vh;
+  padding:28px;
+  border-radius:35px;
+  background:rgba(80,0,25,0.28);
+  border:1px solid rgba(255,180,210,0.35);
+  box-shadow:0 0 35px rgba(255,0,90,0.35);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  ">
+
+    <h1 style="font-size:44px;text-shadow:0 0 18px #ff4d88;">
+      💗 A Rose for You 💗
+    </h1>
+
+    <div></div>
+
+    <p style="
+font-size:34px;
+line-height:1.8;
+color:white;
+text-shadow:0 0 12px rgba(255,255,255,0.4);
+">
+      Just like a rose, you are<br>
+      <span style="color:#ff8fb1;font-weight:bold;">
+        beautiful, rare
+      </span>
+      and precious.<br>
+      You make my world<br>
+      more colorful and meaningful. 💖
+    </p>
+
+    <button onclick="showPage('flowerChoice')"
+style="
+padding:14px 45px;
+border:none;
+border-radius:999px;
+background:linear-gradient(135deg,#ff7aa8,#ff4d88);
+color:white;
+font-size:24px;
+cursor:pointer;
+box-shadow:
+0 0 15px rgba(255,105,180,0.5),
+0 0 30px rgba(255,105,180,0.3);
+">
+← Back
+</button>
+
+  </div>
+
+</div>
+
+
+<!-- LAVENDER PAGE -->
+<div id="lavenderPage" class="page"
+style="background:url('lavender.jpg') center/cover no-repeat;">
+
+  <div style="
+  width:85%;
+  max-width:520px;
+  height:82vh;
+  padding:28px;
+  border-radius:35px;
+  background:rgba(60,0,90,0.22);
+  border:1px solid rgba(220,170,255,0.35);
+  box-shadow:0 0 35px rgba(180,100,255,0.4);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  ">
+
+    <h1 style="font-size:44px;text-shadow:0 0 18px #c77dff;">
+      💜 Lavender for You 💜
+    </h1>
+
+    <div></div>
+
+    <p style="
+font-size:34px;
+line-height:1.8;
+color:white;
+text-shadow:0 0 12px rgba(255,255,255,0.4);
+">
+      Lavender represents calmness,<br>
+      <span style="color:#d8a8ff;font-weight:bold;">
+        peace and beauty...
+      </span><br>
+      Just like the way you make<br>
+      everything around you<br>
+      feel so perfect. 💜
+    </p>
+
+   <button onclick="showPage('flowerChoice')"
+style="
+padding:14px 45px;
+border:none;
+border-radius:999px;
+background:linear-gradient(135deg,#d49fff,#a855f7);
+color:white;
+font-size:24px;
+cursor:pointer;
+box-shadow:
+0 0 15px rgba(180,100,255,0.5),
+0 0 30px rgba(180,100,255,0.3);
+">
+← Back
+</button>
+
+  </div>
+
+</div>
+<script>
+let introLines = [
+  "You're beautiful... 💖",
+  "And super cute... 🥺",
+  "My princess... 👑",
+  "I just want you to be happy... 😊",
+  "And always smiling... ✨",
+  "Thank you for being you... ❤️",
+  "In a world full of people... 🌍",
+  "Someone made my days brighter... ✨",
+  "Her name is... 🥺",
+  "Shreya 💖"
+];
+
+function startIntroStory(){
+
+  let btn = document.getElementById("introBtn");
+  let title = document.getElementById("introText");
+  let page = document.getElementById("page1");
+  let card = document.querySelector("#page1 .card");
+
+  // remove first block
+  card.style.display = "none";
+
+  let lines = [
+    "You're beautiful... 💖",
+    "And super cute... 🥺",
+    "My princess... 👑",
+    "I just want you to be happy... 😊",
+    "And always smiling... ✨",
+    "Thank you for being you... ❤️",
+    "Her name is... 🥺"
+  ];
+
+  let shownLines = [];
+  let i = 0;
+
+  function nextLine(){
+
+    if(i < lines.length){
+
+      let line = document.createElement("div");
+
+      line.className = "line show";
+      line.style.fontSize = "28px";
+      line.style.margin = "12px";
+
+      line.innerHTML = lines[i];
+
+      page.appendChild(line);
+
+      shownLines.push(line);
+
+      i++;
+
+      setTimeout(nextLine, 1000);
+
+    }
+
+    else{
+
+      setTimeout(()=>{
+
+        // fade old lines
+        shownLines.forEach(line=>{
+          line.style.opacity = "0";
+        });
+
+        setTimeout(()=>{
+
+          shownLines.forEach(line=>line.remove());
+
+          // cinematic reveal
+          let reveal = document.createElement("div");
+
+          reveal.style.position = "absolute";
+          reveal.style.top = "50%";
+          reveal.style.left = "50%";
+          reveal.style.transform = "translate(-50%,-50%) scale(0.7)";
+          reveal.style.opacity = "0";
+          reveal.style.transition = "1.5s";
+          reveal.style.display = "flex";
+          reveal.style.flexDirection = "column";
+          reveal.style.alignItems = "center";
+          reveal.style.zIndex = "999";
+
+          let pic = document.createElement("img");
+          pic.src = "pic1.jpg"; // your pic
+          pic.className = "big-img";
+
+          let name = document.createElement("h1");
+          name.className = "glow";
+          name.innerHTML = "Shreya 💖";
+
+          let finalBtn = document.createElement("button");
+          finalBtn.innerHTML = "Start the story ✨";
+
+          finalBtn.onclick = function(){
+            document.getElementById("song2").play().catch(()=>{});
+            showPage("page3");
+          };
+
+          reveal.appendChild(pic);
+          reveal.appendChild(name);
+          reveal.appendChild(finalBtn);
+
+          page.appendChild(reveal);
+
+          setTimeout(()=>{
+            reveal.style.opacity = "1";
+            reveal.style.transform =
+            "translate(-50%,-50%) scale(1)";
+          },100);
+
+        },800);
+
+      },1000);
+
+    }
+
+  }
+
+  nextLine();
+
+}
+
+
+
+function showPage(id){
+
+  let pages = document.querySelectorAll(".page");
+
+  pages.forEach(p => {
+    p.classList.remove("active");
+    p.classList.remove("purple-theme");
+  });
+
+  let page = document.getElementById(id);
+
+  page.classList.add("active");
+
+  if(id !== "page1"){
+    page.classList.add("purple-theme");
+  }
+
+  if(id==="page4" || id==="poemPage"){
+    startLines();
+  }
+}
+
+function startLines(){
+
+  setTimeout(() => {
+
+    let activePage = document.querySelector(".page.active");
+    if(!activePage) return;
+
+    let lines = activePage.querySelectorAll(".line");
+
+    lines.forEach(el => {
+      el.classList.remove("show");
+    });
+
+    lines.forEach((el, i) => {
+      setTimeout(() => {
+        el.classList.add("show");
+      }, i * 120);
+    });
+
+  }, 250); // wait until page fully becomes active
+}
+
+function openFlower(el,page){
+
+  el.classList.add("flower-click");
+
+  setTimeout(()=>{
+
+    el.classList.remove("flower-click");
+
+    showPage(page);
+
+  },500);
+
+}
+
+function yesClicked(){
+  document.getElementById("song2").play().catch(()=>{});
+  showPage("thanks");
+}
+
+function showMermaids(e){
+  for(let i=0;i<15;i++){
+    let m=document.createElement("div");
+    m.className="mermaid";
+    m.innerHTML="🧜‍♀️";
+    m.style.left=(e.clientX+(Math.random()*200-100))+"px";
+    m.style.top=(e.clientY+(Math.random()*200-100))+"px";
+    document.body.appendChild(m);
+    setTimeout(()=>m.remove(),1500);
+  }
+}
+
+let noCount=0;
+
+function noClicked(e){
+
+  if(noCount<5){
+
+    e.target.style.position="absolute";
+    e.target.style.left=Math.random()*80+"%";
+    e.target.style.top=Math.random()*80+"%";
+    noCount++;
+
+  }else{
+
+    document.getElementById("song2").pause();
+    document.getElementById("song2").currentTime = 0;
+
+    showPage("videoPage");
+
+    let vid=document.getElementById("myVideo");
+    vid.muted = true;
+    vid.currentTime = 0;
+
+    setTimeout(()=>{
+      vid.play().then(()=>vid.muted=false);
+    },300);
+
+  }
+}
+
+function openVideoPage(){
+
+  document.getElementById("song2").pause();
+
+  showPage("videoPage");
+
+  let vid = document.getElementById("myVideo");
+
+  vid.currentTime = 0;
+
+  vid.play().catch(()=>{});
+
+}
+
+let lastNoCount=0;
+function lastNoClicked(e){
+  let btn=document.getElementById("lastNoBtn");
+  if(lastNoCount<5){
+    btn.style.position="absolute";
+    btn.style.left=Math.random()*80+"%";
+    btn.style.top=Math.random()*80+"%";
+    lastNoCount++;
+  }else{
+    document.getElementById("lastNoText").innerText="Not gonna happen 😂";
+  }
+}
+
+function lastYesClicked(){
+  showPage("meaningPage");
+}
+
+function burstHearts(e){
+  for(let i=0;i<25;i++){
+    let h=document.createElement("div");
+    h.className="burst";
+    h.innerHTML="💖";
+    h.style.left=(e.clientX+(Math.random()*200-100))+"px";
+    h.style.top=(e.clientY+(Math.random()*200-100))+"px";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),1000);
+  }
+}
+
+function showLalala(e){
+  let t=document.createElement("div");
+  t.className="lalala";
+  t.innerHTML="lalala 💖";
+  t.style.left=e.clientX+"px";
+  t.style.top=e.clientY+"px";
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(),1500);
+}
+
+function zoomAndOpen(img,page){
+  img.classList.add("zoom");
+  setTimeout(()=>{
+    img.classList.remove("zoom");
+    showPage(page);
+  },300);
+}
+
+function backFromVideo(){
+
+  let vid = document.getElementById("myVideo");
+
+  vid.pause();
+
+  document.getElementById("song2").play().catch(()=>{});
+
+  showPage("page3");
+
+}
+
+let funNoCount = 0;
+
+function funNoClicked(){
+
+  let btn = document.getElementById("funNoBtn");
+
+  if(funNoCount < 5){
+
+    btn.style.position = "absolute";
+    btn.style.left = Math.random()*80 + "%";
+    btn.style.top = Math.random()*80 + "%";
+
+    funNoCount++;
+
+  }
+
+  else{
+
+    document.getElementById("funNoText").innerText =
+    "Not gonna happen 😂";
+
+  }
+
+}
+
+function backFromEdits(){
+
+  let v1 = document.getElementById("edit1Video");
+  let v2 = document.getElementById("edit2Video");
+
+  if(v1){
+    v1.pause();
+    v1.currentTime = 0;
+  }
+
+  if(v2){
+    v2.pause();
+    v2.currentTime = 0;
+  }
+
+  document.getElementById("song2").play().catch(()=>{});
+
+  showPage("videoPage");
+}
+
+function menuOpen(el,page){
+
+  el.classList.add("menu-click");
+
+  setTimeout(()=>{
+    showPage(page);
+    el.classList.remove("menu-click");
+  },500);
+
+}
+
+function openEdit(page){
+
+  document.getElementById("song2").pause();
+
+  showPage(page);
+
+  let vid = document.querySelector("#" + page + " video");
+
+  if(vid){
+    vid.currentTime = 0;
+    vid.play().catch(()=>{});
+  }
+
+}
+
+let movieLines = [
+  "In a world full of people... 🌍",
+  "Someone made my days brighter... ✨",
+  "Her name is... 🥺",
+  "Shreya 💖"
+];
+
+
+</script>
+
+</body>
+</html>
