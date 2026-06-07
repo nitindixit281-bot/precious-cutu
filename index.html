@@ -833,7 +833,12 @@ onclick="menuOpen(this,'digitalArtPage')">
 
     <img src="art2.jpg"
          onclick="zoomAndOpen(this,'art2Page')">
-
+    
+    <img src="pic38.jpg"
+         onclick="zoomAndOpen(this,'art3Page')">
+  
+    <img src="pic39.jpg"
+         onclick="zoomAndOpen(this,'art4Page')"> 
     <br>
 
     <button onclick="showPage('page3')">
@@ -872,6 +877,37 @@ onclick="menuOpen(this,'digitalArtPage')">
   </div>
 
 </div>
+
+<div id="art3Page" class="page">
+  <div class="card">
+
+    <img src="pic38.jpg" class="big-img">
+
+    <p>💖</p>
+
+    <button onclick="showPage('digitalArtPage')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+
+<div id="art4Page" class="page">
+  <div class="card">
+
+    <img src="pic39.jpg" class="big-img">
+
+    <p>💖</p>
+
+    <button onclick="showPage('digitalArtPage')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+
 
 <div id="funPage" class="page">
 
@@ -945,6 +981,18 @@ margin-top:25px;
     </p>
 
   </div>
+<!-- SUNFLOWER -->
+<div onclick="openFlower(this,'sunflowerPage')"
+     style="cursor:pointer;">
+
+  <img src="sunflowerstick.jpg"
+       style="width:120px;">
+
+  <p style="color:white;font-size:22px;margin-top:8px;">
+    Sunflower 🌻
+  </p>
+
+</div>
 
 </div>
 
@@ -1086,6 +1134,68 @@ box-shadow:
   </div>
 
 </div>
+
+<!-- SUNFLOWER PAGE -->
+<div id="sunflowerPage" class="page"
+style="background:url('sunflower.jpg') center/cover no-repeat;">
+
+  <div style="
+  width:85%;
+  max-width:520px;
+  height:82vh;
+  padding:28px;
+  border-radius:35px;
+  background:rgba(90,55,0,0.25);
+  border:1px solid rgba(255,220,120,0.4);
+  box-shadow:0 0 35px rgba(255,190,40,0.45);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  ">
+
+    <h1 style="font-size:44px;text-shadow:0 0 18px #ffd54a;">
+      🌻 Sunflower for You 🌻
+    </h1>
+
+    <div></div>
+
+    <p style="
+font-size:34px;
+line-height:1.8;
+color:white;
+text-shadow:0 0 12px rgba(0,0,0,0.5);
+">
+      Just like a sunflower,<br>
+      <span style="color:#ffe680;font-weight:bold;">
+        you bring warmth and light
+      </span><br>
+      You make even normal days<br>
+      feel bright and beautiful. 🌻
+    </p>
+
+    <button onclick="showPage('flowerChoice')"
+style="
+padding:14px 45px;
+border:none;
+border-radius:999px;
+background:linear-gradient(135deg,#ffd54a,#ff9f1c);
+color:white;
+font-size:24px;
+cursor:pointer;
+box-shadow:
+0 0 15px rgba(255,200,60,0.55),
+0 0 30px rgba(255,160,20,0.35);
+">
+← Back
+</button>
+
+  </div>
+
+</div>
+
 <script>
 let introLines = [
   "You're beautiful... 💖",
