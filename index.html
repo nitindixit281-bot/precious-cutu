@@ -355,7 +355,52 @@ img{
     text-shadow:0 0 20px #fff,
                 0 0 40px #c77dff;
   }
+  }
 
+  .cinemaFade{
+  animation:cinemaFade 1s forwards;
+  font-size:38px;
+  text-shadow:
+  0 0 18px #ff69b4,
+  0 0 35px #fff;
+}
+
+@keyframes cinemaFade{
+  0%{
+    opacity:0;
+    transform:translateY(35px) scale(0.9);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+@keyframes pulseHeart{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.25);}
+  100%{transform:scale(1);}
+}
+
+.sparkle{
+  position:absolute;
+  color:white;
+  font-size:22px;
+  animation:sparkleFloat 3s linear forwards;
+}
+
+@keyframes sparkleFloat{
+  0%{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  20%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+    transform:translateY(-120px);
+  }
 }
 
 
@@ -492,7 +537,7 @@ onclick="menuOpen(this,'digitalArtPage')">
     <img src="pic25.jpg" onclick="zoomAndOpen(this,'page12')">
     <img src="pic22.jpg" onclick="zoomAndOpen(this,'page13')">
     <img src="pic29.jpg" onclick="zoomAndOpen(this,'page14')">
-
+    <img src="pic41.jpg" onclick="zoomAndOpen(this,'page15')">
 
     <br>
 
@@ -518,6 +563,7 @@ onclick="menuOpen(this,'digitalArtPage')">
 <div id="page12" class="page"><div class="card"><img src="pic26.jpg" class="big-img"><p>you the best💖</p><button onclick="showPage('page3')">Back</button></div></div>
 <div id="page13" class="page"><div class="card"><img src="pic31.jpg" class="big-img"><p>baddie💖</p><button onclick="showPage('page3')">Back</button></div></div>
 <div id="page14" class="page"><div class="card"><img src="pic30.jpg" class="big-img"><p>beautiful💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page15" class="page"><div class="card"><img src="pic42.jpg" class="big-img"><p>love💖</p><button onclick="showPage('page3')">Back</button></div></div>
 
 <!-- PAGE 4 -->
 <div id="page4" class="page">
@@ -804,15 +850,11 @@ onclick="menuOpen(this,'digitalArtPage')">
 
   <div class="card">
 
-    <img src="pic12.jpg" class="big-img">
-
-    <img src="pic27.jpg" class="big-img">
-
-    <img src="pic28.jpg" class="big-img">
-
-    <img src="pic32.jpg" class="big-img">
-    
-    <p>this is for you 💖</p>
+<img src="pic12.jpg" style="width:180px;border-radius:15px;">
+<img src="pic27.jpg" style="width:180px;border-radius:15px;">
+<img src="pic28.jpg" style="width:180px;border-radius:15px;">
+<img src="pic32.jpg" style="width:180px;border-radius:15px;">
+<img src="pic40.jpg" style="width:180px;border-radius:15px;">
 
     <button onclick="showPage('page3')">
       Back ⬅️
@@ -948,7 +990,7 @@ margin-top:25px;
   <div onclick="openFlower(this,'rosePage')"
        style="cursor:pointer;">
 
-    <img src="roseSticker.jpg"
+    <img src="rosesticker.jpg"
          style="
          width:120px;
          ">
@@ -967,7 +1009,7 @@ margin-top:25px;
   <div onclick="openFlower(this,'lavenderPage')"
        style="cursor:pointer;">
 
-    <img src="lavenderSticker.jpg"
+    <img src="lavenderstick.jpg"
          style="
          width:120px;
          ">
@@ -981,6 +1023,20 @@ margin-top:25px;
     </p>
 
   </div>
+
+<!-- LILY -->
+<div onclick="openFlower(this,'lilyPage')"
+     style="cursor:pointer;">
+
+  <img src="lilystick.jpg"
+       style="width:120px;">
+
+  <p style="color:white;font-size:22px;margin-top:8px;">
+    Lily 🤍
+  </p>
+
+</div>
+
 <!-- SUNFLOWER -->
 <div onclick="openFlower(this,'sunflowerPage')"
      style="cursor:pointer;">
@@ -1196,17 +1252,79 @@ box-shadow:
 
 </div>
 
+<!-- LILY PAGE -->
+<div id="lilyPage" class="page"
+style="background:url('lily.jpg') center/cover no-repeat;">
+
+  <div style="
+  width:85%;
+  max-width:520px;
+  height:82vh;
+  padding:28px;
+  border-radius:35px;
+  background:rgba(255,210,230,0.20);
+  border:1px solid rgba(255,255,255,0.45);
+  box-shadow:0 0 35px rgba(255,210,235,0.55);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  ">
+
+    <h1 style="font-size:44px;text-shadow:0 0 18px #ffd6e8;">
+      🤍 Lily for You 🤍
+    </h1>
+
+    <div></div>
+
+    <p style="
+font-size:34px;
+line-height:1.8;
+color:white;
+text-shadow:0 0 12px rgba(0,0,0,0.45);
+">
+      Just like a lily,<br>
+      <span style="color:#ffe6f2;font-weight:bold;">
+        you are cute, pretty and beautiful
+      </span><br>
+      You make everything feel<br>
+      peaceful, sweet and magical. 🤍
+    </p>
+
+    <button onclick="showPage('flowerChoice')"
+style="
+padding:14px 45px;
+border:none;
+border-radius:999px;
+background:linear-gradient(135deg,#fff0f7,#ff9fcf);
+color:white;
+font-size:24px;
+cursor:pointer;
+box-shadow:
+0 0 15px rgba(255,220,235,0.65),
+0 0 30px rgba(255,160,210,0.35);
+">
+← Back
+</button>
+
+  </div>
+
+</div>
+
+
 <script>
 let introLines = [
   "You're beautiful... 💖",
-  "And super cute... 🥺",
-  "My princess... 👑",
-  "I just want you to be happy... 😊",
-  "And always smiling... ✨",
-  "Thank you for being you... ❤️",
-  "In a world full of people... 🌍",
-  "Someone made my days brighter... ✨",
-  "Her name is... 🥺",
+  "And super cute... ",
+  "My princess... ",
+  "I just want you to be happy... ",
+  "And always smiling... ",
+  "Thank you for being you... ",
+  "In a world full of people... ",
+  "Someone made my days brighter... ",
+  "Her name is... ",
   "Shreya 💖"
 ];
 
@@ -1239,10 +1357,11 @@ function startIntroStory(){
 
       let line = document.createElement("div");
 
-      line.className = "line show";
-      line.style.fontSize = "28px";
-      line.style.margin = "12px";
-
+     line.className = "line show cinematic-text";
+     line.style.fontSize = "30px";
+     line.style.margin = "10px";
+     line.style.transition = "0.4s";
+     line.style.textShadow = "0 0 15px #ff69b4, 0 0 30px #fff";
       line.innerHTML = lines[i];
 
       page.appendChild(line);
@@ -1251,7 +1370,7 @@ function startIntroStory(){
 
       i++;
 
-      setTimeout(nextLine, 1000);
+      setTimeout(nextLine, 550);
 
     }
 
@@ -1294,8 +1413,8 @@ function startIntroStory(){
           finalBtn.innerHTML = "Start the story ✨";
 
           finalBtn.onclick = function(){
-            document.getElementById("song2").play().catch(()=>{});
-            showPage("page3");
+          document.getElementById("song2").play().catch(()=>{});
+          startStoryOpening();
           };
 
           reveal.appendChild(pic);
@@ -1321,7 +1440,137 @@ function startIntroStory(){
   nextLine();
 
 }
+function startStoryOpening(){
 
+  let page = document.getElementById("page1");
+
+  page.innerHTML = `
+<div style="
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:url('pic1.jpg') center/cover no-repeat;
+filter:blur(10px);
+transform:scale(1.1);
+"></div>
+
+<div style="
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+"></div>
+`;
+setInterval(()=>{
+
+  let s = document.createElement("div");
+
+  s.className = "sparkle";
+
+  s.innerHTML = ["✨","💖","🌸"][Math.floor(Math.random()*3)];
+
+  s.style.left = Math.random()*100 + "%";
+  s.style.top = Math.random()*100 + "%";
+
+  page.appendChild(s);
+
+  setTimeout(()=>s.remove(),3000);
+
+},300);
+
+  let box = document.createElement("div");
+
+  box.style.position = "absolute";
+  box.style.top = "50%";
+  box.style.left = "50%";
+  box.style.transform = "translate(-50%,-50%)";
+  box.style.textAlign = "center";
+  box.style.color = "white";
+  box.style.width = "90%";
+
+  page.appendChild(box);
+
+  // 1
+  box.innerHTML = `
+  <div style="
+  font-size:90px;
+  animation:pulseHeart 1s infinite;
+  ">
+  💖
+  </div>
+
+  <h1 class="cinemaFade">
+  Once upon a time... ✨
+  </h1>
+  `;
+
+  // 2
+  setTimeout(()=>{
+
+    box.innerHTML = `
+    <h1 class="cinemaFade">
+    I met someone special... 💖
+    </h1>
+    `;
+
+  },1800);
+
+  // 3
+  setTimeout(()=>{
+
+    box.innerHTML = `
+    <h1 class="cinemaFade">
+    She made my ordinary days magical... 🌸
+    </h1>
+    `;
+
+  },3600);
+
+  // 4
+  setTimeout(()=>{
+
+    box.innerHTML = `
+    <h1 class="cinemaFade">
+    She is beautiful... 🥺💖
+    </h1>
+    `;
+
+  },5400);
+
+  // 5
+  setTimeout(()=>{
+
+    box.innerHTML = `
+    <h1 class="cinemaFade">
+    And I love her... ❤️
+    </h1>
+    `;
+
+  },7600);
+
+  // 6
+  setTimeout(()=>{
+
+    box.innerHTML = `
+    <h1 class="cinemaFade">
+    Let's begin ✨
+    </h1>
+    `;
+
+  },9800);
+
+  // Open menu
+  setTimeout(()=>{
+
+    showPage("page3");
+
+  },11500);
+
+}
 
 
 function showPage(id){
