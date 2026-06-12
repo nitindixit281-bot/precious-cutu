@@ -514,7 +514,7 @@ onclick="menuOpen(this,'digitalArtPage')">
 ✨ Digital Art
 </p>
 
-   <button onclick="showPage('page1')">Back ⬅️</button>
+   <button onclick="goHome()">Back ⬅️</button>
    <button onclick="showPage('meaningPage')">Next ➡️</button>
 
   </div>
@@ -990,7 +990,7 @@ margin-top:25px;
   <div onclick="openFlower(this,'rosePage')"
        style="cursor:pointer;">
 
-    <img src="roseSticker.jpg"
+    <img src="rosesticker.jpg"
          style="
          width:120px;
          ">
@@ -1804,6 +1804,10 @@ function menuOpen(el,page){
     el.classList.remove("menu-click");
   },500);
 
+}
+
+function goHome(){
+  location.reload();
 }
 
 function openEdit(page){
