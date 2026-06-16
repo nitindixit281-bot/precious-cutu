@@ -402,6 +402,61 @@ img{
     transform:translateY(-120px);
   }
 }
+.birthdayCinemaPage{
+  background:linear-gradient(135deg,#ff8fb1,#c77dff,#ff69b4);
+  overflow:hidden;
+}
+
+.birthdayEndText{
+  color:white;
+  font-size:56px;
+  text-align:center;
+  opacity:0;
+  animation:birthdayTextReveal 2.5s ease forwards;
+  text-shadow:
+    0 0 15px #fff,
+    0 0 35px #ff4d88,
+    0 0 70px #fff;
+}
+
+@keyframes birthdayTextReveal{
+  0%{
+    opacity:0;
+    transform:scale(0.4) translateY(60px);
+    filter:blur(15px);
+  }
+  60%{
+    opacity:1;
+    transform:scale(1.15) translateY(0);
+    filter:blur(0);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1);
+    filter:blur(0);
+  }
+}
+
+.birthdayEndBtn{
+  position:absolute;
+  bottom:35px;
+}
+
+.birthdaySparkle{
+  position:absolute;
+  font-size:36px;
+  animation:floatBirthday 4s infinite ease-in-out;
+}
+
+.birthdaySparkle:nth-child(1){top:20%;left:18%;}
+.birthdaySparkle:nth-child(2){top:35%;right:20%;animation-delay:1s;}
+.birthdaySparkle:nth-child(3){bottom:25%;left:45%;animation-delay:2s;}
+
+@keyframes floatBirthday{
+  0%{transform:translateY(0) scale(1);opacity:0.5;}
+  50%{transform:translateY(-35px) scale(1.3);opacity:1;}
+  100%{transform:translateY(0) scale(1);opacity:0.5;}
+}
 
 
 </style>
@@ -410,6 +465,7 @@ img{
 <body>
 
 <audio id="song2" src="song2.mp3"></audio>
+<audio id="song3" src="song3.mp3"></audio>
 
 <div id="showThing" class="page">
   <div class="card">
@@ -457,6 +513,12 @@ img{
 
    ✨ A little surprise
 
+</p>
+
+<p class="line show"
+   style="opacity:1;transform:none;cursor:pointer;"
+   onclick="openBirthdaySection(this)">
+   🎂 Happy Birthday Princess
 </p>
 
 </div>
@@ -990,7 +1052,7 @@ margin-top:25px;
   <div onclick="openFlower(this,'rosePage')"
        style="cursor:pointer;">
 
-    <img src="roseSticker.jpg"
+    <img src="rosesticker.jpg"
          style="
          width:120px;
          ">
@@ -1313,6 +1375,177 @@ box-shadow:
 
 </div>
 
+<div id="birthdayMeterPage" class="page">
+
+  <div class="card">
+
+    <h1 class="glow">Cuteness Filter 💖</h1>
+
+    <p id="cutePercent" style="font-size:32px;color:white;">
+      Loading... 0%
+    </p>
+
+    <div style="
+     position:relative;
+     width:320px;
+     height:90px;
+     margin:20px auto;
+     ">
+
+     <img id="stitchRun"
+     src="stitch.png"
+     style="
+     width:90px;
+     position:absolute;
+     left:0;
+     top:0;
+     transition:0.2s linear;
+     ">
+
+    </div>
+
+    <h1 id="cuteBrokenText" style="
+      color:white;
+      display:none;
+      font-size:36px;
+      text-shadow:0 0 20px #ff69b4;
+    ">
+      BROKEN 😭💖<br>
+      Too much cuteness detected
+    </h1>
+
+    <button id="cuteNextBtn"
+            style="display:none;"
+            onclick="showPage('cakePage')">
+      Next ➡️
+    </button>
+
+    <button onclick="showPage('page1')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+ </div>
+
+<div id="cakePage" class="page">
+
+  <div class="card">
+
+    <h1 class="glow">
+      Happy Birthday Princess 🎂💖
+    </h1>
+
+    <img id="cakeImg"
+         src="cake.png"
+         style="
+         width:250px;
+         margin:20px;
+         ">
+
+    <p style="
+    font-size:24px;
+    color:white;
+    ">
+      Make a wish ✨
+    </p>
+
+    <button id="blowBtn"
+            onclick="blowCandle()">
+      🕯️ Blow The Candle
+    </button>
+
+    <h1 id="wishText"
+        style="
+        display:none;
+        color:white;
+        text-shadow:0 0 20px #ff69b4;
+        ">
+      ✨ Wish Granted ✨
+    </h1>
+    <button onclick="showPage('birthdayLetterPage')">
+  Next ➡️
+</button>
+
+  </div>
+
+</div>
+
+<div id="birthdayLetterPage" class="page">
+
+  <div class="card" style="max-width:700px;">
+
+    <h1 class="glow">
+      💌 Birthday Letter
+    </h1>
+
+    <p style="
+    font-size:24px;
+    line-height:1.8;
+    color:white;
+    ">
+
+    Happy Birthday Princess 🎂💖<br><br>
+
+    Today is your special day,
+    and I just wanted to remind you
+    how amazing you are. ✨<br><br>
+
+    You make ordinary days feel
+    special, and your smile has a way
+    of making everything better. 😊💖<br><br>
+
+    Thank you for being you,
+    thank you for all the smiles,
+    laughs, and moments. ❤️<br><br>
+
+    Never forget how special,
+    beautiful, and loved you are. 👑💖<br><br>
+
+    Happy Birthday once again,
+    my lalala. 🎂💕
+
+    </p>
+
+    <button onclick="openBirthdayEdit()">
+  Next ➡️
+</button>
+
+  </div>
+
+</div>
+
+<div id="birthdayEditPage" class="page">
+
+  <video id="birthdayEditVideo"
+         controls
+         autoplay
+         playsinline
+         style="
+         width:100vw;
+         height:100vh;
+         object-fit:cover;
+         ">
+    <source src="birthdayedit.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+<div id="birthdayEndPage" class="page birthdayCinemaPage">
+
+  <div class="birthdaySparkle">✨</div>
+  <div class="birthdaySparkle">💖</div>
+  <div class="birthdaySparkle">🌸</div>
+
+  <h1 class="birthdayEndText">
+    Be happy my lalala💖✨
+  </h1>
+
+  <button class="birthdayEndBtn" onclick="birthdayEndBack()">
+    Back ⬅️
+  </button>
+
+</div>
 
 <script>
 let introLines = [
@@ -1593,6 +1826,11 @@ function showPage(id){
   if(id==="page4" || id==="poemPage"){
     startLines();
   }
+
+  if(id === "birthdayMeterPage"){
+  startCutenessMeter();
+  }
+
 }
 
 function startLines(){
@@ -1832,6 +2070,99 @@ let movieLines = [
   "Shreya 💖"
 ];
 
+function startCutenessMeter(){
+
+  let percent = 0;
+  let text = document.getElementById("cutePercent");
+  let broken = document.getElementById("cuteBrokenText");
+  let nextBtn = document.getElementById("cuteNextBtn");
+
+  text.innerHTML = "Loading... 0%";
+  broken.style.display = "none";
+  nextBtn.style.display = "none";
+
+  let loading = setInterval(()=>{
+
+    percent += 5;
+
+    text.innerHTML = "Loading... " + percent + "%";
+    let stitch = document.getElementById("stitchRun");
+
+stitch.style.left =
+(percent / 120) * 220 + "px";   
+if(percent >= 120){
+
+  clearInterval(loading);
+
+  let stitch = document.getElementById("stitchRun");
+
+  stitch.style.display = "none";
+
+  text.innerHTML = "Cuteness Filter: 120%";
+  broken.style.display = "block";
+  nextBtn.style.display = "inline-block";
+
+}
+
+  },120);
+
+}
+function blowCandle(){
+
+  document.getElementById("cakeImg").src =
+  "cake-blown.png";
+
+  document.getElementById("blowBtn").style.display =
+  "none";
+
+  setTimeout(()=>{
+
+    document.getElementById("wishText").style.display =
+    "block";
+
+  },1000);
+
+}
+
+function openBirthdaySection(el){
+
+  document.getElementById("song2").pause();
+
+  let song3 = document.getElementById("song3");
+  song3.currentTime = 0;
+  song3.play().catch(()=>{});
+
+  menuOpen(el,'birthdayMeterPage');
+
+}
+
+function openBirthdayEdit(){
+
+  showPage("birthdayEditPage");
+
+  let vid =
+  document.getElementById("birthdayEditVideo");
+
+  vid.currentTime = 0;
+
+  vid.play().catch(()=>{});
+
+  vid.onended = function(){
+
+    showPage("birthdayEndPage");
+
+  };
+
+}
+
+function birthdayEndBack(){
+
+  document.getElementById("song3").pause();
+  document.getElementById("song3").currentTime = 0;
+
+  location.reload();
+
+}
 
 </script>
 
