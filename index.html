@@ -2151,19 +2151,16 @@ function openBirthdaySection(el){
 
 function openBirthdayEdit(){
 
-  let song3 = document.getElementById("song3");
-  song3.pause();
-
   showPage("birthdayEditPage");
 
-  let vid = document.getElementById("birthdayEditVideo");
+  let vid =
+  document.getElementById("birthdayEditVideo");
 
   vid.currentTime = 0;
+
   vid.play().catch(()=>{});
 
   vid.onended = function(){
-
-    song3.play().catch(()=>{});
 
     showPage("birthdayEndPage");
 
