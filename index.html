@@ -576,6 +576,12 @@ onclick="menuOpen(this,'digitalArtPage')">
 ✨ Digital Art
 </p>
 
+<p class="line show"
+style="opacity:1;transform:none;cursor:pointer;"
+onclick="menuOpen(this,'maxPage')">
+✨ Max
+</p>
+
    <button onclick="goHome()">Back ⬅️</button>
    <button onclick="showPage('meaningPage')">Next ➡️</button>
 
@@ -600,6 +606,7 @@ onclick="menuOpen(this,'digitalArtPage')">
     <img src="pic22.jpg" onclick="zoomAndOpen(this,'page13')">
     <img src="pic29.jpg" onclick="zoomAndOpen(this,'page14')">
     <img src="pic41.jpg" onclick="zoomAndOpen(this,'page15')">
+    <img src="pic43.jpg" onclick="zoomAndOpen(this,'page16')">
 
     <br>
 
@@ -626,6 +633,8 @@ onclick="menuOpen(this,'digitalArtPage')">
 <div id="page13" class="page"><div class="card"><img src="pic31.jpg" class="big-img"><p>baddie💖</p><button onclick="showPage('page3')">Back</button></div></div>
 <div id="page14" class="page"><div class="card"><img src="pic30.jpg" class="big-img"><p>beautiful💖</p><button onclick="showPage('page3')">Back</button></div></div>
 <div id="page15" class="page"><div class="card"><img src="pic42.jpg" class="big-img"><p>love💖</p><button onclick="showPage('page3')">Back</button></div></div>
+<div id="page16" class="page"><div class="card"><img src="pic44.jpg" class="big-img"><p>my two favs💖</p><button onclick="showPage('page3')">Back</button></div></div>
+
 
 <!-- PAGE 4 -->
 <div id="page4" class="page">
@@ -903,6 +912,89 @@ onclick="menuOpen(this,'digitalArtPage')">
     <br>
 
     <button onclick="backFromEdits()">Back ⬅️</button>
+
+  </div>
+
+</div>
+
+<!-- MAX -->
+<div id="maxPage" class="page">
+
+  <div class="card">
+
+    <h1>Max 💖</h1>
+
+    <p class="line show"
+       style="opacity:1;transform:none;cursor:pointer;"
+       onclick="openEdit('max1Page')">
+       ✨ Video 1
+    </p>
+
+    <p class="line show"
+       style="opacity:1;transform:none;cursor:pointer;"
+       onclick="openEdit('max2Page')">
+       ✨ Video 2
+    </p>
+
+    <p class="line show"
+       style="opacity:1;transform:none;cursor:pointer;"
+       onclick="openEdit('max3Page')">
+       ✨ Video 3
+    </p>
+
+    <br>
+
+    <button onclick="showPage('page3')">
+      Back ⬅️
+    </button>
+
+  </div>
+
+</div>
+
+<div id="max1Page" class="page">
+
+  <div class="card">
+
+    <video id="max1Video" width="300" controls playsinline>
+      <source src="max1.mp4" type="video/mp4">
+    </video>
+
+    <br>
+
+    <button onclick="backFromMax()">Back ⬅️</button>
+
+  </div>
+
+</div>
+
+<div id="max2Page" class="page">
+
+  <div class="card">
+
+    <video id="max2Video" width="300" controls playsinline>
+      <source src="max2.mp4" type="video/mp4">
+    </video>
+
+    <br>
+
+    <button onclick="backFromMax()">Back ⬅️</button>
+
+  </div>
+
+</div>
+
+<div id="max3Page" class="page">
+
+  <div class="card">
+
+    <video id="max3Video" width="300" controls playsinline>
+      <source src="max3.mp4" type="video/mp4">
+    </video>
+
+    <br>
+
+    <button onclick="backFromMax()">Back ⬅️</button>
 
   </div>
 
@@ -2151,16 +2243,19 @@ function openBirthdaySection(el){
 
 function openBirthdayEdit(){
 
+  let song3 = document.getElementById("song3");
+  song3.pause();
+
   showPage("birthdayEditPage");
 
-  let vid =
-  document.getElementById("birthdayEditVideo");
+  let vid = document.getElementById("birthdayEditVideo");
 
   vid.currentTime = 0;
-
   vid.play().catch(()=>{});
 
   vid.onended = function(){
+
+    song3.play().catch(()=>{});
 
     showPage("birthdayEndPage");
 
@@ -2175,6 +2270,23 @@ function birthdayEndBack(){
 
   location.reload();
 
+}
+
+function backFromMax(){
+
+  let videos = ["max1Video", "max2Video", "max3Video"];
+
+  videos.forEach(id => {
+    let v = document.getElementById(id);
+    if(v){
+      v.pause();
+      v.currentTime = 0;
+    }
+  });
+
+  document.getElementById("song2").play().catch(()=>{});
+
+  showPage("maxPage");
 }
 
 </script>
