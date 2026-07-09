@@ -458,6 +458,99 @@ img{
   100%{transform:translateY(0) scale(1);opacity:0.5;}
 }
 
+/* ---------- PAGE 3 REDESIGN ---------- */
+
+.page3-card{
+    width:min(900px,92%);
+    padding:35px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.25);
+    box-shadow:
+        0 0 35px rgba(255,105,180,.18),
+        0 10px 40px rgba(0,0,0,.18);
+}
+
+.page3-title{
+    font-size:42px;
+    margin-bottom:8px;
+    text-shadow:0 0 15px #ff69b4;
+}
+
+.page3-subtitle{
+    color:white;
+    opacity:.85;
+    margin-bottom:30px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.menu-box{
+
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.20);
+    border-radius:22px;
+
+    padding:25px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    color:white;
+    font-size:20px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.menu-box:hover{
+
+    transform:translateY(-6px) scale(1.03);
+
+    background:rgba(255,255,255,.18);
+
+    box-shadow:
+        0 0 18px rgba(255,105,180,.45),
+        0 0 40px rgba(199,125,255,.25);
+
+    border-color:#ff9ed2;
+}
+
+.menu-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.page3-buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .page3-card{
+        width:92%;
+        padding:22px;
+    }
+
+    .page3-title{
+        font-size:34px;
+    }
+
+}
 
 </style>
 </head>
@@ -530,64 +623,64 @@ img{
 <!-- PAGE 3 -->
 <div id="page3" class="page">
 
-  <div class="card">
+  <div class="card page3-card">
 
-    <h1>LALALALA</h1>
+    <h1 class="page3-title">💖 LALALALA 💖</h1>
+    <p class="page3-subtitle">Choose where to go ✨</p>
 
-    <p class="line show"
-style="opacity:1;transform:none;cursor:pointer;"
-onclick="menuOpen(this,'drawingsMenu')">
-✨ Drawings
-</p>
+    <div class="menu-grid">
 
-<p class="line show"
-style="opacity:1;transform:none;cursor:pointer;"
-onclick="menuOpen(this,'compliments')">
-✨ Compliments
-</p>
+      <div class="menu-box" onclick="menuOpen(this,'drawingsMenu')">
+        <span class="menu-icon">🎨</span>
+        <span>Drawings</span>
+      </div>
 
-<p class="line show"
-style="opacity:1;transform:none;cursor:pointer;"
-onclick="menuOpen(this,'page4')">
-✨ Fav Moments
-</p>
+      <div class="menu-box" onclick="menuOpen(this,'compliments')">
+        <span class="menu-icon">💌</span>
+        <span>Compliments</span>
+      </div>
 
-<p class="line show"
-style="opacity:1;transform:none;cursor:pointer;"
-onclick="menuOpen(this,'poemPage')">
-✨ Poems
-</p>
+      <div class="menu-box" onclick="menuOpen(this,'page4')">
+        <span class="menu-icon">💖</span>
+        <span>Fav Moments</span>
+      </div>
 
-<p class="line show"
-style="opacity:1;transform:none;cursor:pointer;"
-onclick="menuOpen(this,'videoPage')">
-✨ Edits
-</p>
+      <div class="menu-box" onclick="menuOpen(this,'poemPage')">
+        <span class="menu-icon">✍️</span>
+        <span>Poems</span>
+      </div>
 
-<p class="line show"
-style="opacity:1;transform:none;cursor:pointer;"
-onclick="menuOpen(this,'randomPage')">
-✨ Random Things
-</p>
+      <div class="menu-box" onclick="menuOpen(this,'videoPage')">
+        <span class="menu-icon">🎬</span>
+        <span>Edits</span>
+      </div>
 
-<p class="line show"
-style="opacity:1;transform:none;cursor:pointer;"
-onclick="menuOpen(this,'digitalArtPage')">
-✨ Digital Art
-</p>
+      <div class="menu-box" onclick="menuOpen(this,'randomPage')">
+        <span class="menu-icon">🎀</span>
+        <span>Random</span>
+      </div>
 
-<p class="line show"
-style="opacity:1;transform:none;cursor:pointer;"
-onclick="menuOpen(this,'maxPage')">
-✨ Max
-</p>
+      <div class="menu-box" onclick="menuOpen(this,'digitalArtPage')">
+        <span class="menu-icon">🖼️</span>
+        <span>Digital Art</span>
+      </div>
 
-   <button onclick="goHome()">Back ⬅️</button>
-   <button onclick="showPage('meaningPage')">Next ➡️</button>
+      <div class="menu-box" onclick="menuOpen(this,'maxPage')">
+        <span class="menu-icon">🐶</span>
+        <span>Max</span>
+      </div>
+
+    </div>
+
+    <div class="page3-buttons">
+      <button onclick="goHome()">⬅ Back</button>
+      <button onclick="showPage('meaningPage')">Next ➜</button>
+    </div>
 
   </div>
 
 </div>
+
 <!-- DRAWINGS MENU -->
 <div id="drawingsMenu" class="page">
 
